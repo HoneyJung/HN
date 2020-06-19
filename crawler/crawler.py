@@ -29,7 +29,7 @@ def Parsing(contest_text): # 이름, 주최, 날짜, 접수 여부, D-day
         contest_dict[j]['contest_views_count'] = contest_list[i+4].split()[1]
         # print(contest_name,contest_host,contest_apply_period,contest_flag,contest_D_day)
     print(json.dumps(contest_dict, ensure_ascii=False, indent = "\t"))
-    with open('contest.json','w', encoding='UTF-8-sig') as make_file:
+    with open('contest.json','w', encoding='UTF-8-sig') as make_file: #### write on json file
         json.dump(contest_dict, make_file, ensure_ascii = False, indent = "\t")
 
 def Crawl_To_ThinkU():
@@ -55,4 +55,5 @@ def Crawl_To_ThinkU():
         driver.quit() # 종료driver.quit()
 
 if __name__ == '__main__':
-    Crawl_To_ThinkU()
+    Crawl_To_ThinkU() 
+    ###To do => 수시로 파일을 읽고 추가하는 방식으로 Go
