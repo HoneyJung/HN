@@ -7,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 import json
+contest_dict = {}
+
 def Read_json():
     with open('./contest.json', 'r',encoding = 'UTF-8-sig') as f:
         json_data = json.load(f)
@@ -20,6 +22,7 @@ def Parsing(contest_text): # 이름, 주최, 날짜, 접수 여부, D-day
     #print(contest_text)
     #contest_list = contest_list[1:]
     contest_dict = {}
+    #global contest_dict
     for i in range(1,len(contest_list)-1,5):
         j = (i // 5) + 1
         contest_dict[contest_list[i]] = dict()
@@ -40,7 +43,7 @@ def Parsing(contest_text): # 이름, 주최, 날짜, 접수 여부, D-day
             contest_dict[contest_list[i]]['contest_D_day'] = contest_list[i+4].split()[0]
             contest_dict[contest_list[i]]['contest_views_count'] = contest_list[i+4].split()[1]
         # print(contest_name,contest_host,contest_apply_period,contest_flag,contest_D_day)
-    Read_json()
+    #Read_json()
 
     
     #print(json.dumps(contest_dict, ensure_ascii=False, indent = "\t"))
@@ -71,4 +74,3 @@ def Crawl_To_ThinkU():
 
 if __name__ == '__main__':
     Crawl_To_ThinkU() 
-    ###To do => 수시로 파일을 읽고 추가하는 방식으로 Go
