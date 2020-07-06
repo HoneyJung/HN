@@ -1,212 +1,212 @@
 ﻿{
+	"2020 PosART 건축 공모전": {
+		"contest_host": "주최 : 승일실업, ㈜서울건축PCM건설, 포스코강판㈜",
+		"contest_apply_period": "20-07-23 ~ 20-09-04",
+		"contest_flag": "접수예정",
+		"contest_D_day": "D-17",
+		"contest_views_count": "14"
+	},
+	"2020 홍루이젠 대학생 광고 공모전": {
+		"contest_host": "주최 : 홍루이젠",
+		"contest_apply_period": "20-06-22 ~ 20-07-20",
+		"contest_flag": "접수중",
+		"contest_D_day": "D-14",
+		"contest_views_count": "912"
+	},
+	"제2기 물산업 새싹기업 공모전": {
+		"contest_host": "주최 : 서울특별시",
+		"contest_apply_period": "20-06-23 ~ 20-07-06",
+		"contest_flag": "마감임박",
+		"contest_D_day": "D-day",
+		"contest_views_count": "762"
+	},
+	"제9회 충청북도 공공디자인 공모전": {
+		"contest_host": "주최 : 충청북도",
+		"contest_apply_period": "20-08-10 ~ 20-08-14",
+		"contest_flag": "접수예정",
+		"contest_D_day": "D-35",
+		"contest_views_count": "960"
+	},
+	"제 7회 대학생 물환경 정책기술 아이디어 공모전": {
+		"contest_host": "주최 : 환경부",
+		"contest_apply_period": "20-06-01 ~ 20-07-10",
+		"contest_flag": "마감임박",
+		"contest_D_day": "D-4",
+		"contest_views_count": "991"
+	},
 	"한국공항공사 2020년도 대학(원)생 논문 공모전": {
 		"contest_host": "주최 : 한국공항공사",
 		"contest_apply_period": "20-06-16 ~ 20-09-18",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-89",
-		"contest_views_count": "470"
+		"contest_D_day": "D-74",
+		"contest_views_count": "775"
 	},
 	"환경성 표시·광고 웹툰 공모전": {
 		"contest_host": "주최 : 환경산업기술원",
 		"contest_apply_period": "20-06-15 ~ 20-08-31",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-71",
-		"contest_views_count": "745"
-	},
-	"제1기 수소경제 서포터즈 모집": {
-		"contest_host": "주최 : 산업통상자원부",
-		"contest_apply_period": "20-06-15 ~ 20-06-24",
-		"contest_flag": "마감임박",
-		"contest_D_day": "D-3",
-		"contest_views_count": "967"
+		"contest_D_day": "D-56",
+		"contest_views_count": "939"
 	},
 	"[인천광역시] 서해평화 콘텐츠 공모전": {
 		"contest_host": "주최 : 인천광역시",
 		"contest_apply_period": "20-07-01 ~ 20-08-31",
-		"contest_flag": "접수예정",
-		"contest_D_day": "D-10",
-		"contest_views_count": "937"
+		"contest_flag": "접수중",
+		"contest_D_day": "D-56",
+		"contest_views_count": "1182"
 	},
 	"2020 대한민국 등대여행 영상 공모전": {
 		"contest_host": "주최 : 해양수산부",
 		"contest_apply_period": "20-06-15 ~ 20-07-31",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-40",
-		"contest_views_count": "982"
+		"contest_D_day": "D-25",
+		"contest_views_count": "1158"
 	},
-	"2020 전국 대학생 독립기념관 콘텐츠 공모전 공고": {
+	"2020 전국 대학생 독립기념관 콘텐츠 공모전": {
 		"contest_host": "주최 : 독립기념관",
 		"contest_apply_period": "20-06-15 ~ 20-07-20",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-29",
-		"contest_views_count": "780"
+		"contest_D_day": "D-14",
+		"contest_views_count": "959"
 	},
 	"2020 프로소디 콘텐츠 제작 공모전": {
 		"contest_host": "주최 : 휴멜로",
 		"contest_apply_period": "20-06-11 ~ 20-07-22",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-31",
-		"contest_views_count": "1093"
+		"contest_D_day": "D-16",
+		"contest_views_count": "1319"
 	},
 	"2020 “개성! 감성! 먹성! 충만한 당신의 단양 유랑기” 단양군 UCC공모전": {
 		"contest_host": "주최 : 단양군관광협의회",
 		"contest_apply_period": "20-06-15 ~ 20-11-10",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-142",
-		"contest_views_count": "990"
+		"contest_D_day": "D-127",
+		"contest_views_count": "1151"
 	},
 	"해(海)로드 앱 홍보 콘텐츠": {
 		"contest_host": "주최 : 해양수산부",
 		"contest_apply_period": "20-06-01 ~ 20-08-31",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-71",
-		"contest_views_count": "1034"
-	},
-	"제8회 K-해커톤 실감콘텐츠 앱 개발 챌린지": {
-		"contest_host": "주최 : 과학기술정보통신부",
-		"contest_apply_period": "20-06-01 ~ 20-06-19",
-		"contest_flag": "마감",
-		"contest_D_day": "933",
-		"contest_views_count": "NULL"
+		"contest_D_day": "D-56",
+		"contest_views_count": "1175"
 	},
 	"2020년 세계자연유산 제주 만화·캐릭터 공모전": {
 		"contest_host": "주최 : 제주특별자치도",
 		"contest_apply_period": "20-06-08 ~ 20-09-07",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-78",
-		"contest_views_count": "1695"
-	},
-	"교통안전 캠페인 송 패러디 UCC 공모전": {
-		"contest_host": "주최 : 한국교통안전공단",
-		"contest_apply_period": "20-06-01 ~ 20-06-21",
-		"contest_flag": "마감임박",
-		"contest_D_day": "D-day",
-		"contest_views_count": "1102"
-	},
-	"[추천공모] K패션오디션 학생부문 ‘제38회 대한민국패션대전’ 개최공고": {
-		"contest_host": "주최 : 산업통상자원부",
-		"contest_apply_period": "20-05-18 ~ 20-06-29",
-		"contest_flag": "접수중",
-		"contest_D_day": "D-8",
-		"contest_views_count": "1161"
+		"contest_D_day": "D-63",
+		"contest_views_count": "2005"
 	},
 	"옥외광고 홍보콘텐츠 공모전": {
 		"contest_host": "주최 : 한국지방재정공제회 한국옥외광고센터",
 		"contest_apply_period": "20-05-18 ~ 20-09-18",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-89",
-		"contest_views_count": "1456"
-	},
-	"2020년 승강기 안전 공모전": {
-		"contest_host": "주최 : 행정안전부",
-		"contest_apply_period": "20-05-11 ~ 20-06-30",
-		"contest_flag": "접수중",
-		"contest_D_day": "D-9",
-		"contest_views_count": "2020"
-	},
-	"2020년 국세행정 ｢청렴 콘텐츠｣ 공모전": {
-		"contest_host": "주최 : 국세청･한국세무사회･한국공인회계사회",
-		"contest_apply_period": "20-05-06 ~ 20-06-26",
-		"contest_flag": "마감임박",
-		"contest_D_day": "D-5",
-		"contest_views_count": "1513"
+		"contest_D_day": "D-74",
+		"contest_views_count": "1686"
 	},
 	"제7회 기업가정신 콘텐츠 공모전 (청소년부)": {
 		"contest_host": "주최 : 중소벤처기업부",
 		"contest_apply_period": "20-05-18 ~ 20-07-31",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-40",
-		"contest_views_count": "1232"
+		"contest_D_day": "D-25",
+		"contest_views_count": "1352"
 	},
 	"제7회 기업가정신 콘텐츠 공모전 (일반부)": {
 		"contest_host": "주최 : 중소벤처기업부",
 		"contest_apply_period": "20-05-18 ~ 20-07-31",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-40",
-		"contest_views_count": "1799"
-	},
-	"제2회 「열린재정」을 활용한 논문 공모전 안내": {
-		"contest_host": "주최 : 한국재정정보원",
-		"contest_apply_period": "20-06-01 ~ 20-06-30",
-		"contest_flag": "접수중",
-		"contest_D_day": "D-9",
-		"contest_views_count": "1086"
+		"contest_D_day": "D-25",
+		"contest_views_count": "2063"
 	},
 	"승강기 안전기술 및 안전아이디어 공모전": {
 		"contest_host": "주최 : 승강기안전공단",
 		"contest_apply_period": "20-04-16 ~ 20-07-19",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-28",
-		"contest_views_count": "1455"
-	},
-	"춘천사랑 아주 짧은 영화제 공모전": {
-		"contest_host": "주최 : 춘천시",
-		"contest_apply_period": "20-03-18 ~ 20-08-14",
-		"contest_flag": "접수중",
-		"contest_D_day": "D-54",
-		"contest_views_count": "2445"
+		"contest_D_day": "D-13",
+		"contest_views_count": "2408"
 	},
 	"제2회 유니버설디자인아이디어 공모전": {
 		"contest_host": "주최 : 한국장애인개발원",
 		"contest_apply_period": "20-07-27 ~ 20-07-31",
 		"contest_flag": "접수예정",
-		"contest_D_day": "D-36",
-		"contest_views_count": "2933"
+		"contest_D_day": "D-21",
+		"contest_views_count": "3170"
 	},
-	"<시민이 함께 Green, 인천> 시민영상공모전": {
-		"contest_host": "주최 : (사)인천사랑운동시민협의회/인천사랑운동센터",
-		"contest_apply_period": "20-06-15 ~ 20-07-10",
+	"2020년 제16회 전국 청소년 저작권 글짓기 대회": {
+		"contest_host": "주최 : 문화체육관광부",
+		"contest_apply_period": "20-07-06 ~ 20-09-18",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-19",
-		"contest_views_count": "429"
+		"contest_D_day": "D-74",
+		"contest_views_count": "4"
 	},
-	"제5회 서울 물순환 시민문화제 「물순환 공모전」": {
-		"contest_host": "주최 : 서울특별시",
-		"contest_apply_period": "20-06-01 ~ 20-06-30",
+	"제2회 국가어항 디지털사진공모전": {
+		"contest_host": "주최 : 해양수산부",
+		"contest_apply_period": "20-07-01 ~ 20-09-30",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-9",
-		"contest_views_count": "367"
+		"contest_D_day": "D-86",
+		"contest_views_count": "3"
 	},
-	"농촌경관 사진공모전 SNS 기자단 모집": {
-		"contest_host": "주최 : 농촌경관 사진 공모전 운영 사무국",
-		"contest_apply_period": "20-06-15 ~ 20-06-30",
+	"2020 국민참여 청렴콘텐츠 공모전": {
+		"contest_host": "주최 : 국민권익위원회 청렴연수원",
+		"contest_apply_period": "20-06-29 ~ 20-10-16",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-9",
-		"contest_views_count": "248"
+		"contest_D_day": "D-102",
+		"contest_views_count": "6"
 	},
-	"슬기로운 물순환 생활 경진대회": {
-		"contest_host": "주최 : 서울특별시",
-		"contest_apply_period": "20-06-08 ~ 20-07-03",
+	"2020 에듀윌 하반기 GSAT 대비 서포터즈 모집(~7.14, 화)": {
+		"contest_host": "주최 : 에듀윌",
+		"contest_apply_period": "20-07-01 ~ 20-07-14",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-12",
-		"contest_views_count": "385"
+		"contest_D_day": "D-8",
+		"contest_views_count": "2"
 	},
-	"대기질 개선을 위한 정책기술 아이디어 공모전": {
-		"contest_host": "주최 : 환경부 수도권대기환경청",
-		"contest_apply_period": "20-04-29 ~ 20-07-03",
+	"제5회 국립생태원 생태문학 공모전(동시)": {
+		"contest_host": "주최 : 국립생태원",
+		"contest_apply_period": "20-07-06 ~ 20-09-30",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-12",
-		"contest_views_count": "451"
+		"contest_D_day": "D-86",
+		"contest_views_count": "5"
 	},
-	"2020 전국 청소년 패션 일러스트 공모전": {
-		"contest_host": "주최 : 서울예술실용전문학교",
-		"contest_apply_period": "20-07-20 ~ 20-10-18",
-		"contest_flag": "접수예정",
-		"contest_D_day": "D-29",
-		"contest_views_count": "554"
-	},
-	"서울시 메트로 9호선 캐릭터 디자인 공모": {
-		"contest_host": "주최 : 서울시메트로9호선(주)",
-		"contest_apply_period": "20-06-18 ~ 20-07-16",
+	"제 44차 HIMUN 사회자 및 서포터즈 모집": {
+		"contest_host": "주최 : 한국외국어대학교 모의국제연합",
+		"contest_apply_period": "20-07-06 ~ 20-07-22",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-25",
-		"contest_views_count": "427"
+		"contest_D_day": "D-16",
+		"contest_views_count": "2"
 	},
-	"홍성군 평생교육 브랜드 로고 디자인 콘테스트": {
-		"contest_host": "주최 : 홍성군청",
-		"contest_apply_period": "20-06-16 ~ 20-07-14",
+	"생활 건강 브랜드 'PAMP' 로고 디자인 의뢰": {
+		"contest_host": "주최 : ㈜예찬",
+		"contest_apply_period": "20-07-06 ~ 20-07-12",
 		"contest_flag": "접수중",
-		"contest_D_day": "D-23",
-		"contest_views_count": "407"
+		"contest_D_day": "D-6",
+		"contest_views_count": "5"
+	},
+	"BEER LOVER EGGER, 예거 프렌즈 3기": {
+		"contest_host": "주최 : (주)웰그린라들러, Egger",
+		"contest_apply_period": "20-07-06 ~ 20-07-22",
+		"contest_flag": "접수중",
+		"contest_D_day": "D-16",
+		"contest_views_count": "3"
+	},
+	"2020 영등포구청 청년창업생태계 조성사업 (Y-VS) _ 청년기업 시제품제작 지원 프로그램": {
+		"contest_host": "주최 : 영등포구청",
+		"contest_apply_period": "20-06-05 ~ 20-07-19",
+		"contest_flag": "접수중",
+		"contest_D_day": "D-13",
+		"contest_views_count": "1"
+	},
+	"UN SDGs 활동가 '3기' 모집": {
+		"contest_host": "주최 : 한국지속가능청년플랫폼",
+		"contest_apply_period": "20-07-05 ~ 20-07-26",
+		"contest_flag": "접수중",
+		"contest_D_day": "D-20",
+		"contest_views_count": "2"
+	},
+	"JTBC 말하는 대로,세.바.시 15분 출연! 소통전문가와 함께하는 랜선 청춘고민토크쇼! *선착순 모집": {
+		"contest_host": "주최 : 구로청년이룸",
+		"contest_apply_period": "20-07-01 ~ 20-07-12",
+		"contest_flag": "접수중",
+		"contest_D_day": "D-6",
+		"contest_views_count": "2"
 	}
 }
