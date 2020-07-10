@@ -55,7 +55,7 @@ def Crawl_To_ThinkU():
         temp_contest_text = ''
         total_contest_list = []
         temp_contest = ''
-        for i in range(8):
+        while(True):
             contest_list = driver.find_element_by_xpath('//*[@id="contestArea"]')
             temp_contest_text = contest_list.text
 
@@ -66,10 +66,69 @@ def Crawl_To_ThinkU():
             element = driver.find_element_by_xpath('//*[@id="contestArea"]/div[2]/a[3]')
             driver.execute_script("arguments[0].click();", element)
             if (len(temp_contest_text.split('\n')[1:-1])) < 150:
-                print(i)
+                #print(i)
                 break
 
         Parsing(total_contest_list,"contest_ing.json")
+    
+
+        ##### 접수예정 Click
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[4]'))
+        )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
+        element = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[4]')))
+        # click => 잘 안돼서 두번 클릭(다른 방식으로)
+        element = driver.find_element_by_xpath('//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[4]')
+        driver.execute_script("arguments[0].click();", element)
+        driver.find_element_by_xpath('//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[4]').click()
+        temp_contest_text = ''
+        total_contest_list = []
+        temp_contest = ''
+        while(True):
+            contest_list = driver.find_element_by_xpath('//*[@id="contestArea"]')
+            temp_contest_text = contest_list.text
+
+            total_contest_list.extend(temp_contest_text.split('\n')[1:-1])
+            element = WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="contestArea"]/div[2]/a[3]'))
+            )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
+            element = driver.find_element_by_xpath('//*[@id="contestArea"]/div[2]/a[3]')
+            driver.execute_script("arguments[0].click();", element)
+            if (len(temp_contest_text.split('\n')[1:-1])) < 150:
+                #print(i)
+                break
+
+        Parsing(total_contest_list,"contest_will.json")
+    
+           ##### 마감임박Click
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[2]'))
+        )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
+        element = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[2]')))
+        # click => 잘 안돼서 두번 클릭(다른 방식으로)
+        element = driver.find_element_by_xpath('//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[2]')
+        driver.execute_script("arguments[0].click();", element)
+        driver.find_element_by_xpath('//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[2]').click()
+        temp_contest_text = ''
+        total_contest_list = []
+        temp_contest = ''
+        while(True):
+            contest_list = driver.find_element_by_xpath('//*[@id="contestArea"]')
+            temp_contest_text = contest_list.text
+
+            total_contest_list.extend(temp_contest_text.split('\n')[1:-1])
+            element = WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="contestArea"]/div[2]/a[3]'))
+            )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
+            element = driver.find_element_by_xpath('//*[@id="contestArea"]/div[2]/a[3]')
+            driver.execute_script("arguments[0].click();", element)
+            if (len(temp_contest_text.split('\n')[1:-1])) < 150:
+                #print(i)
+                break
+
+        Parsing(total_contest_list,"contest_imminent.json")
     except TimeoutException:    # 예외 처리
         print('해당 페이지에 해당 정보가 존재하지 않습니다.')
     finally:
