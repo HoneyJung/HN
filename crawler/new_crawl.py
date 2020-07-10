@@ -15,7 +15,7 @@ def Read_json():
     print(json_data)
 
 
-def Parsing(contest_list): # 이름, 주최, 날짜, 접수 여부, D-day
+def Parsing(contest_list,file_name): # 이름, 주최, 날짜, 접수 여부, D-day
     #print("hi")
     print(contest_list)
     #contest_list = contest_text.split('\n')
@@ -33,7 +33,7 @@ def Parsing(contest_list): # 이름, 주최, 날짜, 접수 여부, D-day
             contest_dict[contest_list[i]]['contest_D_day'] = contest_list[i+4].split()[0]
             contest_dict[contest_list[i]]['contest_views_count'] = contest_list[i+4].split()[1]
 
-    with open('contest_ing.json','w', encoding='UTF-8-sig') as make_file: #### write on json file
+    with open(file_name,'w', encoding='UTF-8-sig') as make_file: #### write on json file
         json.dump(contest_dict, make_file, ensure_ascii = False, indent = "\t")
 
 def Crawl_To_ThinkU():
@@ -69,7 +69,7 @@ def Crawl_To_ThinkU():
                 print(i)
                 break
 
-        Parsing(total_contest_list)
+        Parsing(total_contest_list,"contest_ing.json")
     except TimeoutException:    # 예외 처리
         print('해당 페이지에 해당 정보가 존재하지 않습니다.')
     finally:
