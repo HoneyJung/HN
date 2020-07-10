@@ -16,7 +16,7 @@ def Read_json():
 
 
 def Parsing(contest_list): # 이름, 주최, 날짜, 접수 여부, D-day
-    print("hi")
+    #print("hi")
     print(contest_list)
     #contest_list = contest_text.split('\n')
     contest_dict = {}
@@ -42,32 +42,33 @@ def Crawl_To_ThinkU():
     driver.get('https://thinkyou.co.kr/')    # 크롤링할 사이트 호출
 
     try:    # 정상 처리
-
         ##### 접수중 Click
-        element = WebDriverWait(driver, 3).until(
+        element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[3]'))
         )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
+        element = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[3]')))
+        # click => 잘 안돼서 두번 클릭(다른 방식으로)
+        element = driver.find_element_by_xpath('//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[3]')
+        driver.execute_script("arguments[0].click();", element)
         driver.find_element_by_xpath('//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[3]').click()
-        driver.implicitly_wait(10)
-        #contest_text = ""
         temp_contest_text = ''
         total_contest_list = []
-        for _ in range(8):
+        temp_contest = ''
+        for i in range(8):
             contest_list = driver.find_element_by_xpath('//*[@id="contestArea"]')
-            # if temp_contest_text == contest_list.text: # if it crawl to end, break!
-            #     print("break")
-            #     #print(temp_contest_text)
-            #     break
             temp_contest_text = contest_list.text
+
             total_contest_list.extend(temp_contest_text.split('\n')[1:-1])
             element = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="contestArea"]/div[2]/a[3]'))
             )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
             element = driver.find_element_by_xpath('//*[@id="contestArea"]/div[2]/a[3]')
             driver.execute_script("arguments[0].click();", element)
-            driver.implicitly_wait(5)
-            #print(temp_contest_text)
-            #print("hi\n\n\n")
+            if (len(temp_contest_text.split('\n')[1:-1])) < 150:
+                print(i)
+                break
+
         Parsing(total_contest_list)
     except TimeoutException:    # 예외 처리
         print('해당 페이지에 해당 정보가 존재하지 않습니다.')
