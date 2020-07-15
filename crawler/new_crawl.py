@@ -18,6 +18,7 @@ def Read_json():
 def Parsing(contest_list,file_name): # 이름, 주최, 날짜, 접수 여부, D-day
     #print("hi")
     print(contest_list)
+    print("\n\n")
     #contest_list = contest_text.split('\n')
     contest_dict = {}
     for i in range(0,len(contest_list),5):
@@ -32,9 +33,9 @@ def Parsing(contest_list,file_name): # 이름, 주최, 날짜, 접수 여부, D-
         else:
             contest_dict[contest_list[i]]['contest_D_day'] = contest_list[i+4].split()[0]
             contest_dict[contest_list[i]]['contest_views_count'] = contest_list[i+4].split()[1]
-
     with open(file_name,'w', encoding='UTF-8-sig') as make_file: #### write on json file
         json.dump(contest_dict, make_file, ensure_ascii = False, indent = "\t")
+    print("complete")
 
 def Crawl_To_ThinkU():
     chromedriver = './chromedriver2'
@@ -85,23 +86,29 @@ def Crawl_To_ThinkU():
         temp_contest_text = ''
         total_contest_list = []
         temp_contest = ''
+        before = ''
+        print("ing")
         while(True):
             contest_list = driver.find_element_by_xpath('//*[@id="contestArea"]')
             temp_contest_text = contest_list.text
-
+            print("hihi")
             total_contest_list.extend(temp_contest_text.split('\n')[1:-1])
             element = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="contestArea"]/div[2]/a[3]'))
             )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
             element = driver.find_element_by_xpath('//*[@id="contestArea"]/div[2]/a[3]')
             driver.execute_script("arguments[0].click();", element)
-            if (len(temp_contest_text.split('\n')[1:-1])) < 150:
+            print(before, temp_contest_text.split('\n')[0])
+
+            if (len(temp_contest_text.split('\n')[1:-1])) < 150 or before == temp_contest_text.split('\n')[0]:
                 #print(i)
                 break
-
+            before = temp_contest_text.split('\n')[0]
+                
+        print("hi")
         Parsing(total_contest_list,"contest_will.json")
     
-           ##### 마감임박Click
+        ##### 마감임박Click
         element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, '//*[@id="wrap"]/div[3]/div/div[5]/div[1]/a[2]'))
         )    # 해당 태그 존재 여부를 확인하기까지 3초 기다림
