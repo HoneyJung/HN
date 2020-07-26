@@ -138,7 +138,8 @@ function setRenderRangeText() {
 
 function setSchedules() {
   cal.clear();
-  generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
+  // generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
+  generateSchedule_jaeha(cal.getViewName());
   cal.createSchedules(ScheduleList);
   refreshScheduleVisibility();
 }
