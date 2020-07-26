@@ -52,6 +52,7 @@ function ScheduleInfo() {
     };
 }
 
+
 function generateTime(schedule, renderStart, renderEnd) {
     var startDate = moment(renderStart.getTime())
     var endDate = moment(renderEnd.getTime());
@@ -160,6 +161,37 @@ function generateSchedule(viewName, renderStart, renderEnd) {
         }
         for (; i < length; i += 1) {
             generateRandomSchedule(calendar, renderStart, renderEnd);
+        }
+    });
+}
+
+
+var data = $.getJSON("./tmp_data.json",function(json) {
+    console.log(json); // this will show the info it in firebug console
+});
+
+function generateSchedule_read_json_jaeha(){
+    var data = $.getJSON("./tmp_data.json");    
+    var schedule = new ScheduleInfo();
+    for (key in data){
+        console.log(key)
+        schedule.key = data[key];
+    }
+
+    
+
+}
+function generateSchedule_jaeha(viewName){
+    ScheduleList = [];
+    CalendarList.forEach(function(calendar) {
+        var i = 0, length = 10;
+        if (viewName === 'month') {
+            length = 3;
+        } else if (viewName === 'day') {
+            length = 4;
+        }
+        for (; i < length; i += 1) {
+            generateSchedule_read_json_jaeha(calendar);
         }
     });
 }
