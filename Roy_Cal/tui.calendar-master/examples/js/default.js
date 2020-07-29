@@ -139,6 +139,7 @@ function setRenderRangeText() {
 function setSchedules() {
   cal.clear();
   generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
+  console.log(ScheduleList);
   cal.createSchedules(ScheduleList);
   refreshScheduleVisibility();
 }

@@ -148,7 +148,49 @@ function generateRandomSchedule(calendar, renderStart, renderEnd) {
 
     ScheduleList.push(schedule);
 }
+function generateRandomSchedule2(calendar, renderStart, renderEnd) {
+    var schedule = new ScheduleInfo();
 
+    schedule.id = chance.guid();
+    schedule.calendarId = calendar.id;
+
+    schedule.title = "hi"
+    schedule.body = chance.bool({likelihood: 20}) ? chance.sentence({words: 10}) : '';
+    schedule.isReadOnly = chance.bool({likelihood: 20});
+    generateTime(schedule, renderStart, renderEnd);
+
+    schedule.isPrivate = chance.bool({likelihood: 10});
+    schedule.location = chance.address();
+    schedule.attendees = chance.bool({likelihood: 70}) ? generateNames() : [];
+    schedule.recurrenceRule = chance.bool({likelihood: 20}) ? 'repeated events' : '';
+    schedule.state = chance.bool({likelihood: 20}) ? 'Free' : 'Busy';
+    schedule.color = calendar.color;
+    schedule.bgColor = calendar.bgColor;
+    schedule.dragBgColor = calendar.dragBgColor;
+    schedule.borderColor = calendar.borderColor;
+
+    if (schedule.category === 'milestone') {
+        schedule.color = schedule.bgColor;
+        schedule.bgColor = 'transparent';
+        schedule.dragBgColor = 'transparent';
+        schedule.borderColor = 'transparent';
+    }
+
+    schedule.raw.memo = chance.sentence();
+    schedule.raw.creator.name = chance.name();
+    schedule.raw.creator.avatar = chance.avatar();
+    schedule.raw.creator.company = chance.company();
+    schedule.raw.creator.email = chance.email();
+    schedule.raw.creator.phone = chance.phone();
+
+    if (chance.bool({ likelihood: 20 })) {
+        var travelTime = chance.minute();
+        schedule.goingDuration = travelTime;
+        schedule.comingDuration = travelTime;
+    }
+
+    ScheduleList.push(schedule);
+}
 function generateSchedule(viewName, renderStart, renderEnd) {
     ScheduleList = [];
     CalendarList.forEach(function(calendar) {
@@ -159,7 +201,9 @@ function generateSchedule(viewName, renderStart, renderEnd) {
             length = 4;
         }
         for (; i < length; i += 1) {
-            generateRandomSchedule(calendar, renderStart, renderEnd);
+            generateRandomSchedule2(calendar, renderStart, renderEnd);
+            console.log(i);
         }
     });
+    console.log(viewName,renderStart,renderEnd);
 }
