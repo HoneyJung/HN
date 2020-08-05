@@ -1,0 +1,27 @@
+<script>
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const requestURL = 'https://yeseul.wisen.space/data.json';
+var request = new XMLHttpRequest();
+request.open("GET", 'https://cors-anywhere.herokuapp.com/https://yeseul.wisen.space/data.json');
+request.setRequestHeader('x-requested-with', 'XMLHttpRequest');
+request.responseType = 'text';
+request.send();
+
+var stdInfoText = request.response;
+var stdInfo = JSON.stringify(stdInfoText);
+
+//console.log(stdInfo);
+var a;
+fetch(proxyurl + requestURL)
+.then(response => response.text())
+.then(contents => {
+    console.log(contents);
+    a = content;
+}
+    )
+.catch(() => console.log("Can’t access " + requestURL + " response. Blocked by browser?"))
+
+console.log(a);
+document.getElementById("here").innerHTML = stdInfo;
+
+</script>
