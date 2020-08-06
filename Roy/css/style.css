@@ -258,12 +258,12 @@ ol {
 	background: #191919;
 }
 .logo {
-	padding: 24px 0 30px;
+	padding: 16px 0 30px;
+	width: 200px;
+	height : 200px;
 }
 
-.logo a {
-	display: inline-block;
-}
+
 
 .main-menu {
 	text-align: right;
@@ -1659,11 +1659,7 @@ ol {
 
 /*-------------------------------- Respinsive Media Styles --------------------------------*/
 
-@media only screen and (min-width: 1600px) {
-	.portfolio-section .container {
-		max-width: 1570px;
-	}
-}
+
 
 @media only screen and (min-width: 1200px) {
 	.container {
@@ -1739,6 +1735,13 @@ ol {
 	}
 	.header-section .container {
 		position: relative;
+		left : 300px;
+		top : 50px;
+	}
+	.logo{
+		position: static;
+		left : 100px;
+		top : 50px;
 	}
 	.slicknav_nav .slicknav_row,
 	.slicknav_nav a {
