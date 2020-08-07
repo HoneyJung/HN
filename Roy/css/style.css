@@ -1739,9 +1739,11 @@ ol {
 		top : 50px;
 	}
 	.logo{
-		position: static;
-		left : 100px;
-		top : 50px;
+		height : 100%;
+		position: absolute;
+		padding-left : 3000px;
+		margin-left:100px;
+		top : 10pt;
 	}
 	.slicknav_nav .slicknav_row,
 	.slicknav_nav a {
