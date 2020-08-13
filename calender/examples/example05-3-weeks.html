@@ -57,16 +57,131 @@
         </span>
         <span id="renderRange" class="render-range"></span>
       </div>
-      <div id="calendar">
-        
-      </div>
+      <div id="calendar"></div>
     </div>
 
     <!-- ADD BY SIHYUN -->
     <!-- The Modal -->
     <div id="myModal1" class="modal">
       <!-- Modal content -->
+
       <div class="modal-content">
+        <div class="employment-information nav-anchor" nav_id="0">
+          <div class="ec-info-container">
+            <div class="ec-image">
+              <img
+                class="ahnlab"
+                src="https://jasoseol.s3-ap-northeast-2.amazonaws.com/employment_companies/images/000/038/343/original/CI_AhnLab.jpg?1596774164"
+                ;
+              />
+            </div>
+            <div class="ec-info">
+              <!-- <div class="ec-info-title ec-name">기업명</div> -->
+              <div class="ec-info-content ec-name">
+                <span ng-bind="item.name" class="ng-binding">안랩</span>
+              </div>
+              <div class="ec-info-content period">
+                <!-- ngIf: item.recruit_type === 0 -->
+                <div ng-if="item.recruit_type === 0" class="ng-scope">
+                  <span class="time">
+                    <span
+                      ng-bind="item.start_time | date: 'yyyy.MM.dd HH:mm'"
+                      class="ng-binding"
+                      >2020.08.10 00:00 ~ 2020.08.23 23:59</span
+                    >
+                  </span>
+                  (<span
+                    ng-show="d_day(item.end_time) !== null"
+                    ng-bind="Dday(item.end_time)"
+                    class="orange ng-binding"
+                    >11일 남음</span
+                  >)
+                </div>
+                <!-- end ngIf: item.recruit_type === 0 -->
+                <!-- ngIf: item.recruit_type === 1 -->
+              </div>
+              <div class="ec-info-content buttons">
+                <!-- ngIf: item.employment_page_url !== null -->
+                <div
+                  class="ec-wrapper homepage ng-scope"
+                  ng-if="item.employment_page_url !== null"
+                >
+                  <a
+                    class="ec-option-letters link-homepage-string piwik-recruit-modal-homepage ga-recruit-modal-homepage"
+                    ng-href="https://ahnlab.recruiter.co.kr"
+                    target="_blank"
+                    ng-click="upHomepageCount()"
+                    href="https://ahnlab.recruiter.co.kr"
+                  >
+                    홈페이지
+                  </a>
+                </div>
+                <!-- end ngIf: item.employment_page_url !== null -->
+                <div class="ec-wrapper copy-url">
+                  <div
+                    class="ec-option-letters piwik-recruit-modal-share ga-recruit-modal-share"
+                    ng-click="copyUrlToggle()"
+                  >
+                    채용 공고 공유
+                  </div>
+                  <!-- ngIf: showUrlDropdown -->
+                  <!-- ngIf: showUrlDropdown -->
+                </div>
+                <div
+                  class="ec-wrapper recruit-ref dropdown ng-hide"
+                  uib-dropdown=""
+                  on-toggle="toggled(open)"
+                  ng-show="item.recruit_refs &amp;&amp; item.recruit_refs.length > 1"
+                >
+                  <a
+                    href=""
+                    class="ec-option-letters dropdown-toggle link-homepage-string"
+                    uib-dropdown-toggle=""
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    기업 공채 전략
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu position">
+                    <!-- ngRepeat: recruit_ref in item.recruit_refs -->
+                    <li
+                      ng-repeat="recruit_ref in item.recruit_refs"
+                      class="ng-scope"
+                    >
+                      <a
+                        ng-href=" http://joburl.kr/c7xhq"
+                        target="_blank"
+                        ng-click="open_recruit_ref(recruit_ref, 'top')"
+                        href=" http://joburl.kr/c7xhq"
+                      >
+                        <span ng-bind="recruit_ref.name" class="ng-binding"
+                          >안랩</span
+                        >
+                        <small
+                          >(<span
+                            ng-bind="recruit_ref.registered_at | date: 'yy/MM/dd'"
+                            class="ng-binding"
+                            >18/12/10</span
+                          >)</small
+                        >
+                      </a>
+                    </li>
+                    <!-- end ngRepeat: recruit_ref in item.recruit_refs -->
+                  </ul>
+                </div>
+
+                <!-- ngIf: item.attached_file_url !== null && item.attached_file_url !== undefined -->
+              </div>
+              <div class="count-information">
+                <div class="count-item">
+                  공고 조회 9065회 | 즐겨찾기 578회 | 홈페이지 방문 158회
+                </div>
+                <!-- end ngIf: item.employment_page_url !== null -->
+              </div>
+            </div>
+          </div>
+        </div>
         <span class="close">&times;</span>
         <img src="images/1.jpg" alt="My Image" width="700" />
       </div>
