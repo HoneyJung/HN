@@ -18360,7 +18360,7 @@ var theme = {
 
     // creation guide style
     'common.creationGuide.backgroundColor': "#FFFFF",
-    'common.creationGuide.border': '1px solid #e5e5e5',
+    'common.creationGuide.border': '#e5e5e5',
 
     // month header 'dayname'
     'month.dayname.height': '31px',

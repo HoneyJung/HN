@@ -42,6 +42,7 @@
         };
 
     function Plugin(element, options) {
+
         this.element = element;
 
         // jQuery has an extend method which merges the contents of two or
@@ -103,6 +104,8 @@
         iconClass = prefix + '_icon';
 
         if (settings.label === '') {
+            console.log("HI");
+
             iconClass += ' ' + prefix + '_no-text';
         }
 
@@ -399,6 +402,7 @@
         var settings = $this.settings;
         var items = $this._getActionItems(el);
         var duration = 0;
+
         if (animate) {
             duration = settings.duration;
         }
@@ -506,6 +510,7 @@
 
     // get all 1st level items that are clickable
     Plugin.prototype._getActionItems = function(el) {
+
         var data = el.data("menu");
         if (!data) {
             data = {};
@@ -531,6 +536,7 @@
     };
 
     Plugin.prototype.open = function(){
+
         var $this = this;
         if ($this.btn.hasClass(prefix+'_collapsed')) {
             $this._menuToggle();
