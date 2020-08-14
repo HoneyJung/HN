@@ -61,7 +61,6 @@ cal.createSchedules([
     category: "time",
     dueDateClass: "",
     start: "2020-07-27T22:30:00+09:00",
-    end: "2020-07-29T22:30:00+09:00",
     bgColor: "#ffffff",
   },
   {
