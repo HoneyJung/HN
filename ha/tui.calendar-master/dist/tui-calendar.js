@@ -18359,7 +18359,7 @@ var theme = {
     'common.today.color': '#333',
 
     // creation guide style
-    'common.creationGuide.backgroundColor': "#FFFFF",
+    'common.creationGuide.backgroundColor': "#FFFFFF",
     'common.creationGuide.border': '#e5e5e5',
 
     // month header 'dayname'
