@@ -21,9 +21,42 @@
     <link rel="stylesheet" type="text/css" href="./css/default.css" />
     <link rel="stylesheet" type="text/css" href="./css/icons.css" />
     <link rel="stylesheet" type="text/css" href="./css/sihyun.css" />
+    <script
+      src="https://kit.fontawesome.com/ddf1a04f37.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+    <nav class="navbar">
+      <!-- Logo with text -->
+      <div class="navbar__logo">
+        <i class="fas fa-quidditch"></i>
+        <a href="">HaeNem</a>
+      </div>
+      <!-- Menu -->
+      <ul class="navbar__menu">
+        <li><a href="#">공모전 공고</a></li>
+        <li><a href="#">공모전 달력</a></li>
+        <li><a href="#">팀원 모집</a></li>
+        <li><a href="#">실무 경험 채우기</a></li>
+        <li><a href="#">데이터랩</a></li>
+      </ul>
+      <!-- Icons -->
+      <ul class="navbar__icons">
+        <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-facebook-f"></i></li>
+      </ul>
+      <!-- Toggle button -->
+      <a href="#" class="navbar__toggleBtn">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
+
     <div class="code-html">
       <div id="menu">
         <span id="menu-navi">
@@ -55,16 +88,17 @@
             ></i>
           </button>
         </span>
+
+        <!-- 달력 날짜 관련된 range-->
         <span id="renderRange" class="render-range"></span>
       </div>
-      <div id="calendar"></div>
     </div>
 
     <!-- ADD BY SIHYUN -->
+
     <!-- The Modal -->
     <div id="myModal1" class="modal">
       <!-- Modal content -->
-
       <div class="modal-content">
         <div class="employment-information nav-anchor" nav_id="0">
           <div class="ec-info-container">

@@ -1,27 +1,11 @@
-/*
-cal.on("clickSchedule", function (event) {
-  var schedule = event.schedule;
-  lastClickSchedule = schedule;
-  if (!lastClickSchedule) {
-    cal.updateSchedule(lastClickSchedule.id, lastClickSchedule.calendarId, {
-      isFocused: false,
-    });
-  }
-  cal.updateSchedule(schedule.id, schedule.calendarId, {
-    isFocused: true,
-  });
+const toggleBtn = document.querySelector(".navbar__toggleBtn");
+const menu = document.querySelector(".navbar__menu");
+const icons = document.querySelector(".navbar__icons");
 
-  lastClickSchedule = schedule;
-  // open detail view
+toggleBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  icons.classList.toggle("active");
 });
-cal.clear();
-cal.on("clickDayname", function (event) {
-  if (cal.getViewName() === "week") {
-    cal.setDate(new Date(event.date));
-    cal.changeView("day", true);
-  }
-});
-*/
 
 cal.on("clickSchedule", function (event) {
   var schedule = event.schedule;
