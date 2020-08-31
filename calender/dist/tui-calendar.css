@@ -593,17 +593,24 @@
 .tui-full-calendar-month-guide-block {
   position: absolute;
 }
+/* 클릭 및 눌렀을 때 색깔 */
+/* .tui-full-calendar-month-guide-block {
+  position: absolute;
+} */
 .tui-full-calendar-month-weekday-schedule {
   margin-top: 2px;
+  
 }
-.tui-full-calendar-month-creation-guide {
+
+/* 클릭 및 눌렀을 때 색깔 */
+/* .tui-full-calendar-month-creation-guide {
   top: 0;
   bottom: -1px;
   left: -1px;
   right: 0;
   position: absolute;
   z-index: 20;
-}
+} */
 .tui-full-calendar-month-guide-focused {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }

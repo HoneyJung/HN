@@ -18359,9 +18359,9 @@ var theme = {
     'common.today.color': '#333',
 
     // creation guide style
-    'common.creationGuide.backgroundColor': 'rgba(81, 92, 230, 0.05)',
-    'common.creationGuide.border': '1px solid #515ce6',
-
+    /* 눌렀을때 색깔 */
+    'common.creationGuide.backgroundColor': "#FFFFF",
+    'common.creationGuide.border': '1px solid #e5e5e5',
     // month header 'dayname'
     'month.dayname.height': '31px',
     'month.dayname.borderLeft': 'none',
