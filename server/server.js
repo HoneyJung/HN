@@ -1,28 +1,17 @@
+const express = require('express')
+var engines = require('consolidate');
 
-var http = require('http');
-var fs = require('fs');
+const app = express()
+const port = 3000
+const path = require('path');
+app.engine('html', engines.hogan);
+app.set('view engine', 'html');
+app.set('views', 'views');
 
+app.get('/', (req, res) => {
+    res.render('index.html')
+})
 
-function send404Message(response) {
-    response.writeHead(404, { "Content-Type": "text/plain" });
-    response.write("404 ERROR... ");
-    response.end();
-}
-
-function onRequest(request, response) {
-    if (request.method == 'GET' && request.url == '/index') {
-        response.writeHead(200, { "Content-Type": "text/html" }); 
-        fs.createReadStream("../UI/main/index.html").pipe(response); 
-    }
-    else if(request.method == 'GET' && request.url == '/calendar') {
-        response.writeHead(200, { "Content-Type": "text/html" }); 
-        fs.createReadStream("../UI/calendar/src/calendar.html").pipe(response); 
-
-    }
-    else {
-        send404Message(response);
-    }
-}
-
-http.createServer(onRequest).listen(8000);
-console.log("Server Created...");
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
