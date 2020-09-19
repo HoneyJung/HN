@@ -13785,22 +13785,22 @@ function MonthCreationGuide(monthCreation) {
         monthCreationDragstart: this._createGuideElement,
         monthCreationDrag: this._onDrag,
         monthCreationDragend: this._onDragEnd,
-        monthCreationClick: this._createGuideElement
+        // monthCreationClick: this._createGuideElement
     }, this);
 }
 
 /**
  * Destructor
  */
-// MonthCreationGuide.prototype.destroy = function() {
-//     this.monthCreation.off(this);
+MonthCreationGuide.prototype.destroy = function() {
+    this.monthCreation.off(this);
 
-//     if (this.guide) {
-//         this.guide.destroy();
-//     }
+    if (this.guide) {
+        this.guide.destroy();
+    }
 
-//     this.guide = this.monthCreation = null;
-// };
+    this.guide = this.monthCreation = null;
+};
 
 /**
  * Drag start event handler
