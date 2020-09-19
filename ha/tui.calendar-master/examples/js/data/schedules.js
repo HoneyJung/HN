@@ -178,9 +178,11 @@ function generateSchedule_read_json_jaeha(){
     }
 }
 function generateSchedule_jaeha(viewName){
-    $.getJSON("./tmp_data.json",function(json) {
-        console.log(json); // this will show the info it in firebug console
-    });
+    var data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
+    console.log(data);
+    // $.getJSON("./tmp_data.json",function(json) {
+    //     console.log(json); // this will show the info it in firebug console
+    // });
     console.log(data);
     ScheduleList = [];
     CalendarList.forEach(function(calendar) {
